@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/authorization.css">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,300&display=swap" rel="stylesheet">
+</head>
+<body onload="load()">
+  <header>
+    <div class="header_container">
+      <div class="game_name_container">
+        <div class="game_name_text">Игра "Переливание"</div>
+      </div>
+      <div class="change_color_btn_container">
+        <button onclick="changeColors()" class="change_color_btn">Изменить тему</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="form_auth_block">
+      <div class="form_auth_block_content">
+        <p class="form_auth_block_head_text">Для начала игры придумайте себе внутриигровое имя</p>
+          <label>Введите Ваш Никнейм</label>
+          <form action="">
+            <input id="nickname" name="auth_email" placeholder="Введите Ваш Никнейм" required>
+            <button onclick="start()" class="form_auth_button" type="button" name="form_auth_submit">Войти</button>
+          </form>
+      </div>
+  </div>
+
+
+  <script src="/script/authorization.js"></script>
+  </body>
+</html>
