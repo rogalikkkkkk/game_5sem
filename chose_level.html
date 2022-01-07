@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/chose_level.css">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,300&display=swap" rel="stylesheet">
+</head>
+<body onload="start()">
+    <div class="header_container_main">
+        <div class="game_name_container">
+          <div class="game_name_text">Игра "Переливание"</div>
+        </div>
+        <div class="user_nickname_container">
+            <div class="user_nickname" id="user_nickname"></div>
+        </div>
+        <div class="change_color_btn_container">
+          <button onclick="changeColors()" class="change_color_btn">Изменить тему</button>
+        </div>
+      </div>
+    <div class="main_body">
+      <div class="hrefl_container">
+        <a href="main_page.html" class="hrefl">Вернуться к выбору уровня</a>
+      </div>
+      
+      <div class="res_container_older">
+        <div class="result_container">
+          <div class="try_number">Номер попытки</div>
+          <div class="points">Количество баллов</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/script/chose_level.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main_page.css">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,300&display=swap" rel="stylesheet">
+</head>
+<body onload="start()">
+    <div class="header_container_main">
+        <div class="game_name_container">
+          <div class="game_name_text">Игра "Переливание"</div>
+        </div>
+        <div class="user_nickname_container">
+            <div class="user_nickname" id="user_nickname"></div>
+        </div>
+        <div class="change_color_btn_container">
+          <button onclick="changeColors()" class="change_color_btn">Изменить тему</button>
+        </div>
+    </div>
+    <div class="main_body">
+        <div class="chose_level_container">
+            <a onclick="tutorialActivate()">Пройти обучение</a>
+            <a onclick="firstLevelActivate()">Пройти первый уровень</a>
+            <a href="chose_level.html" class="res_btn">Посмотреть результаты</a>
+            <a href ="authorization.html" class="aut_btn" onclick="clearLocalStorage()">Вернуться к авторизации</a>
+        </div>
+        <div class="upper_buttons_container">
+            <a href="" class="next_btn_success" onclick="choseLevelActivate()">Вернутья к выбору уровня</a>
+            <a href="chose_level.html" class="check_results">Посмотреть результаты</a>
+        </div>
+        
+        <div class="timer_container">
+            <div class="timer">00:00</div>
+        </div>
+        <div class="task_container" id="task_container">
+            <div class="bucket1" id="bckt1" draggable="true">
+                <div class="span_container">
+                    <div class="span_conatainer_incl">
+                        <span>Volume = <strong id="v5">5</strong></span><br>
+                        <span>Current filling = <strong id="cf5">0</strong></span>
+                    </div>
+                </div>
+                <img src="/sources/vector_bucket.svg" class="imgWater" alt="bucket1">
+            </div>
+            <div class="bucket2" id="bckt2" draggable="true">
+                <div class="span_container">
+                    <div class="span_conatainer_incl">
+                        <span>Volume = <strong id="v3">3</strong></span><br>
+                        <span>Current filling = <strong id="cf3">0</strong></span>
+                    </div>
+                </div>
+                <img src="/sources/vector_bucket.svg" alt="bucket1">
+            </div>
+            <div class="bucket3" id="bckt3" draggable="true">
+                <div class="span_container">
+                    <div class="span_conatainer_incl">
+                        <span>Volume = <strong id="vx">8</strong></span><br>
+                        <span>Current filling = <strong id="cfx">0</strong></span>
+                    </div>
+                </div>
+                <img src="/sources/vector_bucket.svg" alt="bucket1">
+            </div>
+            <div class="draining">
+                <div class="draining_text">Место для слива воды</div>
+            </div>
+        </div>
+        <div class="description_container">Это пробный уровень. Цель данного уровня - изучить механики данной игры. Для переливания воды из одной банки в другую необходимо перетащить банку - источни на банку - приёмник. При этом переливании в приёмник попадёт вода из источника, а та, которая не влезла, останется в приёмнике. Чтобы наполнить (полностью и только) банку, необходимо один раз нажать на банку. Чтобы полностью вылить воду из банки, необходимо перенести банку в зону слива воды.
+            <strong class="needed_info"></strong>
+        </div>
+    </div>
+
+    <div class="endGame">
+        <div class="endGameTextContainer1">У вас победа</div>
+        <div class="endGameTextContainer2">Поздравляю, вы набрали <strong class="result_points"></strong> очков</div>
+        <div class="picture_container">
+            <img src="/sources/buckety.png" alt="oups" class="bucket_end">
+        </div>
+        <div class="endGame_buttons_container">
+            <div class="on_authorization_button_container">
+                <a href="" class="next_btn_success" onclick="choseLevelActivate()">Вернутья к выбору уровня</a>
+                <a href="chose_level.html" class="res_btn">Посмотреть результаты</a>
+            </div>
+        </div>        
+    </div>
+
+    <script src="/script/main_page.js"></script>
+</body>
+</html>
