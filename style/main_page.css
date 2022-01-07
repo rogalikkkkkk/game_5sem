@@ -11,7 +11,7 @@ body{
     margin: 0;
     background-size: cover;
     border-radius: 4px;
-    background-image: url(/sources/bgim_auth_w.jpg);
+    background-image: url(sources/bgim_auth_w.jpg);
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
@@ -96,7 +96,7 @@ body{
     position: relative;
     cursor: move;
     z-index: 10;
-    background-image: url(/sources/water.png);
+    background-image: url(sources/water.png);
     border-radius: 16px;
     height: 263px;
 }
@@ -109,7 +109,7 @@ body{
     position: relative;
     cursor: move;
     z-index: 10;
-    background-image: url(/sources/water.png);
+    background-image: url(sources/water.png);
     border-radius: 15px;
     height: 237px;
 }
@@ -119,7 +119,7 @@ body{
     cursor: move;
     z-index: 10;
     display: none;
-    background-image: url(/sources/water.png);
+    background-image: url(sources/water.png);
     border-radius: 19px;
     height: 318px;
 }

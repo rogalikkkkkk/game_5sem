@@ -11,15 +11,15 @@ function start() {
 }
 
 function changeColors() {
-    if (document.querySelector('.form_auth_block').style.backgroundImage ==  'url("/sources/bgim_auth_w.jpg")') {
-        document.querySelector('.form_auth_block').style.backgroundImage = 'url("/sources/bgim_auth_b.jpg")';
-        localStorage.setItem('back_img', 'url("/sources/bgim_auth_b.jpg")');
+    if (document.querySelector('.form_auth_block').style.backgroundImage ==  'url("sources/bgim_auth_w.jpg")') {
+        document.querySelector('.form_auth_block').style.backgroundImage = 'url("sources/bgim_auth_b.jpg")';
+        localStorage.setItem('back_img', 'url("sources/bgim_auth_b.jpg")');
         localStorage.setItem('back_color', 'rgb(181, 184, 177)');
         localStorage.setItem('text_color', 'darkblue');
         localStorage.setItem('back_color_opacity', 'rgba(181, 184, 177, .95)');
     } else {
-        document.querySelector('.form_auth_block').style.backgroundImage = 'url("/sources/bgim_auth_w.jpg")';
-        localStorage.setItem('back_img', 'url("/sources/bgim_auth_w.jpg")');
+        document.querySelector('.form_auth_block').style.backgroundImage = 'url("sources/bgim_auth_w.jpg")';
+        localStorage.setItem('back_img', 'url("sources/bgim_auth_w.jpg")');
         localStorage.setItem('back_color', 'rgb(79, 79, 79)');
         localStorage.setItem('text_color', 'darkgrey');
         localStorage.setItem('back_color_opacity', 'rgba(79, 79, 79, .95)');
