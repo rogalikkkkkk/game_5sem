@@ -36,7 +36,7 @@ function changeColors() {
 
 function load() {
     if (!localStorage.getItem('back_img')) {
-        localStorage.setItem('back_img', 'url("/sources/bgim_auth_w.jpg")');
+        localStorage.setItem('back_img', 'url("sources/bgim_auth_w.jpg")');
     }
 
     if (!localStorage.getItem('back_color')) {
