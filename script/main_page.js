@@ -95,10 +95,13 @@ function drag(event) {
 if (localStorage.getItem('try') == null) {
     localStorage.setItem('try', parseInt(0));
 }
+
 let a = 5;
 let b = 3;
 let needed = 4;
 let moves = 0;
+let intervalium = 1;
+
 do {
     b = Math.floor(Math.random() * 12) + 2;
 } while (a == b);
@@ -198,7 +201,7 @@ function firstLevelActivate (event) {
     min = 0;
     sec = 0;
     moves = 0;
-    setInterval(tick, 1000);
+    intervalium = setInterval(tick, 1000);
     document.querySelector('.chose_level_container').style.display = 'none';
     document.querySelector('.timer_container').style.display = 'block';
     document.querySelector('.task_container').style.display = 'flex';
@@ -263,6 +266,7 @@ function success (event) {
     }
     document.querySelector('.upper_buttons_container').style.display = 'none';
     document.querySelector('.bucket_end').style.animation = 'success 2s infinite';
+    clearInterval(intervalium);
 }
 
 function clearLocalStorage(event) {
@@ -286,4 +290,5 @@ function defeat(event) {
     document.querySelector('.bucket_end').style.animation = 'defeat 2s infinite';
     document.querySelector('.endGameTextContainer1').innerHTML = 'Вы получили проигрыш';
     document.querySelector('.endGameTextContainer2').innerHTML = 'К сожалению, у вас закончилось время, попробуйте ещё раз';
+    clearInterval(intervalium);
 }
