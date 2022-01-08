@@ -116,15 +116,27 @@ bigBucket.ondrop = dropB;
 smallBucket.ondrop = dropB;
 thirdBucket.ondrop = dropB;
 draining.ondrop = drainDrop;
+let destObjectFillingId = 0;
+let destFilling = 0;
+let destVolume = 0;
 function dropB (event) {
 
     if (event.target.parentElement.id != event.dataTransfer.getData('sourceObjectDiv')) {
         let destObject = event.target;
         let sourcObjectFillingId = event.dataTransfer.getData('sourceObjectId');
-        let destObjectFillingId = destObject.querySelectorAll('strong')[1].id;
+
+        if (destObject.querySelectorAll('strong')[1]) {
+            destObjectFillingId = destObject.querySelectorAll('strong')[1].id;
+            destFilling = parseInt(destObject.querySelectorAll('strong')[1].innerHTML);
+            destVolume = parseInt(destObject.querySelectorAll('strong')[0].innerHTML);
+        } else {
+            console.log(destObject.parentElement.querySelectorAll('strong')[1])
+            destObjectFillingId = destObject.parentElement.querySelectorAll('strong')[1].id;
+            destFilling = parseInt(destObject.parentElement.querySelectorAll('strong')[1].innerHTML);
+            destVolume = parseInt(destObject.parentElement.querySelectorAll('strong')[0].innerHTML);
+        }
+        
         let selectedFilling = parseInt(event.dataTransfer.getData('fill'));
-        let destFilling = parseInt(destObject.querySelectorAll('strong')[1].innerHTML);
-        let destVolume = parseInt(destObject.querySelectorAll('strong')[0].innerHTML);
         let destFillingTmp = destFilling + selectedFilling;
         if (destFillingTmp > destVolume) {
             document.getElementById(destObjectFillingId).innerHTML = destVolume;
