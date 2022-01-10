@@ -10,6 +10,7 @@ function start() {
     }
 }
 
+
 function changeColors() {
     if (document.querySelector('.form_auth_block').style.backgroundImage ==  'url("sources/bgim_auth_w.jpg")') {
         document.querySelector('.form_auth_block').style.backgroundImage = 'url("sources/bgim_auth_b.jpg")';
